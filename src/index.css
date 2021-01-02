@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Resets*/
+
+*,
+*::before, /*  discutir todo este bloco de código*/
+*::after{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*:focus{
+  outline: 3px dashed #228bec;
+  outline-offset: 0;
 }
+
+/*ate o fim deste bloco nao vi nenhema alteração */
+
+html{
+  font: 62.5% / 1.15 sans-serif;
+}
+
+h1,h2 {
+  margin-bottom: 0;
+}
+ul{
+  list-style: none;
+  padding:0 ;
+}
+
+/* ate o momento diminui a fonte de toda a aplicação  */
+
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+/* esta classe button nao vi fazendo nada */
+
+button ::-moz-focus-inner{
+  border: 0;
+}
+
+button,input,optgroup,select,textarea{
+  font-family: inherit;
+  font-size:100%;
+  line-height:1.15;
+  margin: 0;
+}
+button,input{
+  overflow: visible;
+}
+input[type="text"] /* que sitax é essa ? */{
+  border-radius: 0;
+}
+body{
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  font: 1.6rem/1.25 Arial,sans-serif;
+  background-color: #F5F5F5;
+  color: #4d4d4d;
+}
+ /* o body colocou cor no fundo e centralizou o texto */
+
+ @media screen and (min-width:620px){
+   body{
+     font-size: 1.9rem;
+     line-height: 1.31579;
+   }
+ }
+
+ /* End Resets /*
+ /* Global Styles */
+
+ .form-group > input[type="text"]{  /* pedir explicação sobre todo esse bloco */
+   display: inline-block;
+   margin-top: 0.4rem;
+ }
+ .btn {
+   padding: 0.8rem 1rem 0.7rem;
+   border: 0.2rem solid #4d4d4d;
+   cursor: pointer;
+   text-transform: capitalize;
+ }
+
+
+
