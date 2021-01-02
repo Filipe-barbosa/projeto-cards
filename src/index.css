@@ -91,5 +91,56 @@ body{
    text-transform: capitalize;
  }
 
+ .btn.togle-btn {
+   border-width: 1px;
+   border-color:  #d3d3d3;
+ }
+
+ .btn.togle-btn[aria-pressed="true"]{
+   text-decoration: underline;
+   border-color:#4d4d4d 
+ }
+
+ .btn__danger{
+   color: #fff;
+   background-color: #000;
+ }
+ .btn__filter{
+   border-color: lightgrey;
+ }
+
+ .btn__prymary{
+   color: #fff;
+   background-color:#000 ;
+ }
+ .btn-group{
+   display: flex;
+   justify-content: space-between;
+ }
+ .btn-group > * {
+   flex: 1 1 49%;
+ }
+
+ .btn-group > * + * {
+   margin-left: 0.8rem;
+ }
+ .label-wrapper {
+   margin: 0;
+   flex:  0 0 100%;
+   text-align: center;
+   
+ }
+
+ .visually-hidden{
+   margin: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
+   clip : rect(1px 1px 1px 1px);
+   clip : rect(1px 1px 1px 1px);
+   white-space: nowrap;
+ }
+
+
 
 
