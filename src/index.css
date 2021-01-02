@@ -128,7 +128,7 @@ body{
    margin: 0;
    flex:  0 0 100%;
    text-align: center;
-   
+
  }
 
  .visually-hidden{
@@ -140,6 +140,37 @@ body{
    clip : rect(1px 1px 1px 1px);
    white-space: nowrap;
  }
+
+ [class*="stack"]> * {
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+  .stack-small >* + *{
+    margin-top: 1.25rem;
+  }
+
+  .stake-large >* + * {
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width:550px){
+    .stack-small > * + * {
+      margin-top: 1.4rem;
+    }
+    .stake-large > * + * {
+      margin-top: 2.8rem;
+    } 
+  }
+  .stake-exception{
+    margin-top: 1.2rem;
+  }
+
+  /* End Global Styles*/
+
+  .todoapp {
+    background: #fff;
+    margin:2rem 0 4rem 0 ;
+  }
 
 
 
