@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
-// 1. Nasce
-// 2. Muda
-// 3. Morre
+import  Title from "./Title";
 
 function App() {
   return (
     
       <div className="todoapp stack-large">
-        <h1>TodoMatic</h1>
+         <Title />
         <form>
           <h2 className="label-wrapper">
             <label htmlFor="new-todo-input" className="label__lg">
