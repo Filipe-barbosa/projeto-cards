@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import  Title from "./Title";
+import Forms from "./Forms";
 
 function App() {
   return (
     
       <div className="todoapp stack-large">
          <Title />
-        <form>
-          <h2 className="label-wrapper">
-            <label htmlFor="new-todo-input" className="label__lg">
-              What needs to be done?
-            </label>
-          </h2>
-          <input
-            type="text"
-            id="new-todo-input"
-            className="input input__lg"
-            name="text"
-            autoComplete="off"
-          />
-          <button type="submit" className="btn btn__primary btn__lg">
-            Add
-          </button>
-        </form>
+         <Forms nameButton="Add"></Forms>
         <div className="filters btn-group stack-exception">
           <button type="button" className="btn toggle-btn" aria-pressed="true">
             <span className="visually-hidden">Show </span>
