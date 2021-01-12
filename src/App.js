@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import  Title from "./Title";
-import Forms from "./Forms";
+import AddItemForm from "./Forms";
 
 function App() {
   return (
     
       <div className="todoapp stack-large">
          <Title />
-         <Forms nameButton="Add"></Forms>
+         <AddItemForm formTitle="Add"></AddItemForm>
         <div className="filters btn-group stack-exception">
           <button type="button" className="btn toggle-btn" aria-pressed="true">
             <span className="visually-hidden">Show </span>

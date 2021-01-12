@@ -1,4 +1,4 @@
-const Forms = (props) => (
+const AddItemForm = (props) => (
   <form>
     <h2 className="label-wrapper">
       <label htmlFor="new-todo-input" className="label__lg">
@@ -13,9 +13,8 @@ const Forms = (props) => (
       autoComplete="off"
     />
     <button type="submit" className="btn btn__primary btn__lg">
-      {props.nameButton}
+      {props.formTitle}
     </button>
   </form>
 );
-
-export default Forms
+export default AddItemForm
