@@ -2,7 +2,7 @@ const AddItemForm = (props) => (
   <form>
     <h2 className="label-wrapper">
       <label htmlFor="new-todo-input" className="label__lg">
-        What needs to be done?
+        {props.formTitle}
       </label>
     </h2>
     <input
@@ -13,8 +13,8 @@ const AddItemForm = (props) => (
       autoComplete="off"
     />
     <button type="submit" className="btn btn__primary btn__lg">
-      {props.formTitle}
+      {props.buttonName}
     </button>
   </form>
 );
-export default AddItemForm
+export default AddItemForm;
