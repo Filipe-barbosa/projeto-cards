@@ -1,4 +1,4 @@
-const TaskFilter = (props) => (
+const TaskButtonFilter = (props) => (
   <button
     type="button"
     className="btn toggle-btn"
@@ -10,4 +10,4 @@ const TaskFilter = (props) => (
   </button>
 );
 
-export default TaskFilter;
+export default TaskButtonFilter;
