@@ -1,3 +1,13 @@
+import React, { useState } from "react";
+const [tarefas, setTarefas] = useState([]);
+
+const handleTarefas = () => {
+  setTarefas([...tarefas, input]);
+  setInput("");
+};
+
+const [input, setInput] = useState("");
+
 const AddItemForm = (props) => (
   <form>
     <h2 className="label-wrapper">
@@ -7,12 +17,15 @@ const AddItemForm = (props) => (
     </h2>
     <input
       type="text"
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
       id="new-todo-input"
       className="input input__lg"
       name="text"
       autoComplete="off"
     />
     <button type="submit" className="btn btn__primary btn__lg">
+      onClick{handleTarefas}
       {props.buttonName}
     </button>
   </form>
