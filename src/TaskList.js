@@ -9,8 +9,10 @@ const TaskList = (props) => {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        {props.taskList.map((item, index) => (
-          <TaskItem isChecked={item.isChecked}>{item.itemMessage}</TaskItem>
+        {props.taskList.map((item) => (
+          <TaskItem key={item.itemMessage} isChecked={item.isChecked}>
+            {item.itemMessage}
+          </TaskItem>
         ))}
       </ul>
     </>
