@@ -1,13 +1,7 @@
 import TaskButtonFilter from "./TaskButtonFilter";
 import TaskList from "./TaskList";
 
-const TaskDashboard = () => {
-  const cardList = [
-    { itemMessage: "Eat", isChecked: true },
-    { itemMessage: "Edit", isChecked: false },
-    { itemMessage: "Sleep", isChecked: false },
-  ];
-
+const TaskDashboard = (props) => {
   return (
     <>
       <div className="filters btn-group stack-exception">
@@ -15,7 +9,7 @@ const TaskDashboard = () => {
         <TaskButtonFilter message="Active" isAriaPressed={false} />
         <TaskButtonFilter message="Complete" isAriaPressed={false} />
       </div>
-      <TaskList taskList={cardList} />
+      <TaskList taskList={props.taskList} />
     </>
   );
 };
