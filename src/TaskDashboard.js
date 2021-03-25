@@ -9,7 +9,7 @@ const TaskDashboard = (props) => {
         <TaskButtonFilter message="Active" isAriaPressed={false} />
         <TaskButtonFilter message="Complete" isAriaPressed={false} />
       </div>
-      <TaskList taskList={props.taskList} />
+      <TaskList taskList={props.taskList} setTasklist={props.setTasklist} />
     </>
   );
 };

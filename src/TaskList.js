@@ -1,16 +1,27 @@
 import TaskItem from "./TaskItem";
 
 const TaskList = (props) => {
+  const deleteItem = (id) => {
+    let index = 0;
+    const newList = props.taskList.filter((item) => {
+      index += 1;
+      return index - 1 !== id;
+    });
+    props.setTasklist(newList);
+  };
   return (
     <>
       <h2 id="list-heading">{props.taskList.length} tasks remaining</h2>
       <ul
-        role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        {props.taskList.map((item) => (
-          <TaskItem key={item.itemMessage} isChecked={item.isChecked}>
+        {props.taskList.map((item, index) => (
+          <TaskItem
+            key={item.itemMessage + index}
+            isChecked={item.isChecked}
+            onDelete={() => deleteItem(index)}
+          >
             {item.itemMessage}
           </TaskItem>
         ))}
