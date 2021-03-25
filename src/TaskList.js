@@ -5,6 +5,18 @@ const TaskList = (props) => {
     const newList = props.taskList.filter((_, index) => index !== indexDelete);
     props.setTasklist(newList);
   };
+  const isChecked = (item, indexChecked) => {
+    let newList = [];
+    props.taskList.map((item, index) => {
+      if (index === indexChecked) {
+        item.isChecked = !item.isChecked;
+        newList = [...props.taskList];
+      }
+      props.setTasklist(newList);
+      console.log(item)
+    });
+  };
+
   return (
     <>
       <h2 id="list-heading">{props.taskList.length} tasks remaining</h2>
@@ -17,6 +29,7 @@ const TaskList = (props) => {
             key={item.itemMessage + index}
             isChecked={item.isChecked}
             onDelete={() => deleteItem(index)}
+            onChecked={() => isChecked(item, index)}
           >
             {item.itemMessage}
           </TaskItem>
