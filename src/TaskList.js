@@ -1,12 +1,8 @@
 import TaskItem from "./TaskItem";
 
 const TaskList = (props) => {
-  const deleteItem = (id) => {
-    let index = 0;
-    const newList = props.taskList.filter((item) => {
-      index += 1;
-      return index - 1 !== id;
-    });
+  const deleteItem = (indexDelete) => {
+    const newList = props.taskList.filter((_, index) => index !== indexDelete);
     props.setTasklist(newList);
   };
   return (
