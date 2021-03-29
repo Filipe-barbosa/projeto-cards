@@ -13,9 +13,7 @@ const TaskList = (props) => {
           isChecked: !item.isChecked,
         };
       }
-      return {
-        ...item,
-      };
+      return item;
     });
     props.setTasklist(newList);
   };
