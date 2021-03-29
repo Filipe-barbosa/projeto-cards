@@ -7,13 +7,12 @@ const AddItemForm = (props) => {
     const newItem = {
       itemMessage: input,
       isChecked: false,
-      isEditing: false,
     };
     props.onSubmit(newItem);
     setInput("");
   };
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           {props.formTitle}
