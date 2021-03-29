@@ -11,7 +11,11 @@ const TaskLItem = (props) => {
         <button type="button" className="btn">
           Edit <span className="visually-hidden">{props.children}</span>
         </button>
-        <button type="button" className="btn btn__danger">
+        <button
+          type="button"
+          className="btn btn__danger"
+          onClick={props.onDelete}
+        >
           Delete <span className="visually-hidden">{props.children}</span>
         </button>
       </div>

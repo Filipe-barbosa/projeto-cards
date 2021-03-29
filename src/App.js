@@ -6,6 +6,7 @@ import TaskDashboard from "./TaskDashboard";
 
 function App() {
   const [taskList, setTasklist] = useState([]);
+
   return (
     <div className="todoapp stack-large">
       <Title />
@@ -14,7 +15,7 @@ function App() {
         formTitle="What needs to be done?"
         onSubmit={(data) => setTasklist([...taskList, data])}
       />
-      <TaskDashboard taskList={taskList} />
+      <TaskDashboard taskList={taskList} setTasklist={setTasklist} />
     </div>
   );
 }
