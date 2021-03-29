@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 const AddItemForm = (props) => {
   const [input, setInput] = useState("");
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const newItem = {
       itemMessage: input,
       isChecked: false,
@@ -12,7 +13,7 @@ const AddItemForm = (props) => {
     setInput("");
   };
   return (
-    <form onSubmit={((e)=>e.preventDefault())} >
+    <form onSubmit={(e) => e.preventDefault()}>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           {props.formTitle}
