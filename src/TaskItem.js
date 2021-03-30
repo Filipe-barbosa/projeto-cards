@@ -2,7 +2,12 @@ const TaskLItem = (props) => {
   return (
     <li className="todo stack-small">
       <div className="c-cb">
-        <input id="todo-0" type="checkbox" defaultChecked={props.isChecked} />
+        <input
+          id="todo-0"
+          type="checkbox"
+          value={props.isChecked}
+          onChange={props.onChecked}
+        />
         <label className="todo-label" htmlFor="todo-0">
           {props.children}
         </label>
