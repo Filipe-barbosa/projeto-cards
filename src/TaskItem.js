@@ -13,7 +13,7 @@ const TaskLItem = (props) => {
         </label>
       </div>
       <div className="btn-group">
-        <button type="button" className="btn">
+        <button type="button" className="btn" onClick={props.onEdit}>
           Edit <span className="visually-hidden">{props.children}</span>
         </button>
         <button

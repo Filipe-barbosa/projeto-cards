@@ -7,6 +7,7 @@ const AddItemForm = (props) => {
     const newItem = {
       itemMessage: input,
       isChecked: false,
+      isEdit:false
     };
     props.onSubmit(newItem);
     setInput("");
