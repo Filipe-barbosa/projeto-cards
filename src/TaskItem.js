@@ -26,6 +26,12 @@ const TaskLItem = (props) => {
         />
         {isEditMode ? (
           <input
+            nomeButtonEdit="Save"
+            type="text"
+            id="new-todo-input"
+            className="input input__lg"
+            name="text"
+            autoComplete="off"
             value={editValue}
             onChange={onChangeEditValue}
             onBlur={onBlurEditValue}
@@ -38,7 +44,8 @@ const TaskLItem = (props) => {
       </div>
       <div className="btn-group">
         <button type="button" className="btn" onClick={toggleEditedMode}>
-          Edit <span className="visually-hidden">{props.children}</span>
+          {isEditMode ? "Save" : "Edit"}
+          <span className="visually-hidden">{props.children}</span>
         </button>
         <button
           type="button"
