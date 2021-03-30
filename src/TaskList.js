@@ -17,12 +17,12 @@ const TaskList = (props) => {
     });
     props.setTasklist(newList);
   };
-  const handleEdit = (indexEdit) => {
+  const handleEdit = (indexEdit, newMessage) => {
     const newList = props.taskList.map((item, index) => {
       if (index === indexEdit) {
         return {
           ...item,
-          isEdit: !item.isEdit,
+          itemMessage: newMessage,
         };
       }
       return item;
@@ -40,10 +40,11 @@ const TaskList = (props) => {
         {props.taskList.map((item, index) => (
           <TaskItem
             key={item.itemMessage + index}
+            index={index}
             isChecked={item.isChecked}
             onDelete={() => deleteItem(index)}
             onChecked={() => handleCheked(index)}
-            onEdit={() => handleEdit(index)}
+            onEdit={handleEdit}
           >
             {item.itemMessage}
           </TaskItem>
