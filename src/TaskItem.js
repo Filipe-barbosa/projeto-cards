@@ -6,13 +6,10 @@ const TaskLItem = (props) => {
 
   const toggleEditedMode = () => {
     setIsEditMode(!isEditMode);
-  };
-  const onChangeEditValue = (e) => {
-    setEditvalue(e.target.value);
-  };
-  const onBlurEditValue = (e) => {
     props.onEdit(props.index, editValue);
-    setEditvalue(!isEditMode);
+  };
+  const handleChangeEditValue = (e) => {
+    setEditvalue(e.target.value);
   };
 
   return (
@@ -26,15 +23,13 @@ const TaskLItem = (props) => {
         />
         {isEditMode ? (
           <input
-            nomeButtonEdit="Save"
             type="text"
             id="new-todo-input"
             className="input input__lg"
             name="text"
             autoComplete="off"
             value={editValue}
-            onChange={onChangeEditValue}
-            onBlur={onBlurEditValue}
+            onChange={handleChangeEditValue}
           />
         ) : (
           <label className="todo-label" htmlFor="todo-0">
