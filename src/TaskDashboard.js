@@ -2,24 +2,17 @@ import TaskButtonFilter from "./TaskButtonFilter";
 import TaskList from "./TaskList";
 
 const TaskDashboard = (props) => {
-  const buttonFilter = {
-    All: {
-      isPressed: true,
-    },
-    Active: {
-      isPressed: false,
-    },
-    Complete: {
-      isPressed: false,
-    },
-  };
   return (
     <>
       <div className="filters btn-group stack-exception">
-        {Object.keys(buttonFilter).map((key, index) => (
+        {props.buttonFilter.map((buttonName, index) => (
           <TaskButtonFilter
-          message={key}
-          isAriaPressed={buttonFilter[key].isPressed}
+            message={buttonName}
+            isAriaPressed={props.buttonPressed === buttonName}
+            onSetActive={props.setButtonPressed}
+            buttonFilter={props.buttonFilter}
+            setButtonPressed={props.setButtonPressed}
+            buttonPressed={props.buttonPressed}
           ></TaskButtonFilter>
         ))}
       </div>
