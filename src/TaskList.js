@@ -40,11 +40,10 @@ const TaskList = (props) => {
         {props.taskList.map((item, index) => (
           <TaskItem
             key={item.itemMessage + index}
-            index={index}
             isChecked={item.isChecked}
             onDelete={() => deleteItem(index)}
             onChecked={() => handleCheked(index)}
-            onEdit={handleEdit}
+            onEdit={(message) => handleEdit(index, message)}
           >
             {item.itemMessage}
           </TaskItem>

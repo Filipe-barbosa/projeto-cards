@@ -13,7 +13,7 @@ function App() {
       <AddItemForm
         buttonName="Add"
         formTitle="What needs to be done?"
-        onSubmit={(data) => setTasklist([...taskList, data])}
+        onSubmit={(data) => setTasklist([data, ...taskList])}
       />
       <TaskDashboard taskList={taskList} setTasklist={setTasklist} />
     </div>
