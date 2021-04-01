@@ -7,10 +7,10 @@ const TaskButtonFilter = (props) => {
       type="button"
       className="btn toggle-btn"
       aria-pressed={props.isAriaPressed}
-      onClick={buttonOnClick}
+      onClick={props.onSetActive}
     >
       <span className="visually-hidden">Show </span>
-      <span>{props.message}</span>
+      <button>{props.message}</button>
       <span className="visually-hidden"> tasks</span>
     </button>
   );
