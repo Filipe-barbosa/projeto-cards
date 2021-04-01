@@ -82,11 +82,8 @@ body {
   }
 }
 
-/* End Resets /*
- /* Global Styles */
 
 .form-group > input[type="text"] {
-  /* pedir explicação sobre todo esse bloco */
   display: inline-block;
   margin-top: 0.4rem;
 }
@@ -171,7 +168,7 @@ body {
   margin-top: 1.2rem;
 }
 
-/* End Global Styles*/
+
 
 .todoapp {
   background: #fff;
