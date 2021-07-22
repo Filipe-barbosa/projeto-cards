@@ -1,13 +1,22 @@
 import TaskButtonFilter from "./TaskButtonFilter";
+import React, { useState } from "react";
 import TaskList from "./TaskList";
 
 const TaskDashboard = (props) => {
+  const [buttonPressed, setButtonPressed] = useState("All");
+  const buttonFilter = ["All", "Active", "Complete"];
   return (
     <>
       <div className="filters btn-group stack-exception">
-        <TaskButtonFilter message="All" isAriaPressed={true} />
-        <TaskButtonFilter message="Active" isAriaPressed={false} />
-        <TaskButtonFilter message="Complete" isAriaPressed={false} />
+        {buttonFilter.map((buttonName, index) => (
+          <TaskButtonFilter
+            message={buttonName}
+            isAriaPressed={buttonPressed === buttonName}
+            onSetActive={() => setButtonPressed(buttonName)}
+            buttonFilter={buttonFilter}
+            buttonPressed={buttonPressed}
+          ></TaskButtonFilter>
+        ))}
       </div>
       <TaskList taskList={props.taskList} setTasklist={props.setTasklist} />
     </>
